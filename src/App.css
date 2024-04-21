@@ -1,3 +1,17 @@
 .active{
   color: orange;
 }
+
+.blogPagination a{
+ cursor: pointer;
+}
+
+.activePagination a{
+  background-color: orange;
+
+}
+
+.pagein{
+    border: 1px solid #eae8e8;
+    margin: 0px 5px;
+}
