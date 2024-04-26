@@ -2,7 +2,7 @@ import React from 'react'
 
 const BlogCategory = ({OnSelectCategory, activeCategory}) => {
 
-   const categories = ["Startups", "Security", "AI", "Apps", "Tech"];
+   const categories = ["smartphones", "laptops", "fragrances", "skincare", "groceries", "home-decoration"];
   return (
     <div className=' px-4 mb-8 lg:space-x-16 flex items-center flex-wrap border-b-2 py-5 '>
       <button onClick={() => OnSelectCategory(null)} className={`lg:ml-12 ${activeCategory ? "": "active"}`}>All</button>

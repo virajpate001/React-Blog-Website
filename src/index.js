@@ -13,6 +13,7 @@ import {
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
+import SingleBlog from './components/SingleBlog';
 
 
 
@@ -36,6 +37,13 @@ const router = createBrowserRouter([
       {
         path:"/contact",
         element:<Contact/>
+      },
+      {
+        path:"/products/:id",
+        element:<SingleBlog/>,
+        loader : ({params}) => fetch(`https://dummyjson.com/products/${params.id}`)
+    
+        
       }
       
     ]

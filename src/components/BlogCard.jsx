@@ -3,20 +3,21 @@ import { Link } from 'react-router-dom';
 import { FaUser } from "react-icons/fa";
 
 
-const BlogCard = ({blogs, currentPage, selectCategory, pageSize}) => {
+const BlogCard = ({products, currentPage, selectCategory, pageSize}) => {
  
-  let filterdBlog = blogs.filter((blogs)=> !selectCategory || blogs.category === selectCategory).slice((currentPage -1)*pageSize, currentPage * pageSize);
+  let filterdProduct = products;
 
   return (
     <div className=' grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8'>
        {
-        filterdBlog.map((blog) => <Link key={blog.id} className='p-5 shadow-lg rounded cursor-pointer '>
+        filterdProduct.map((products) => <Link to={`/products/${products.id}`} key={products.id} className='p-5 shadow-lg rounded cursor-pointer '>
           <div>
-             <img src={blog.image} alt="" className=' w-full ' />
+             <img src={products.thumbnail} alt="" className=' w-full ' />
           </div>
-          <h3 className='mt-4 mb-2 font-bold '>{blog.title}</h3>
-          <p className='mb-2'><FaUser className=' inline-flex items-center mr-2 '/>{blog.author}</p>
-          <p className='mb-2 text-sm '>Published {blog.published_date}</p>
+          <h3 className='mt-4 mb-2 font-bold '>{products.title}</h3>
+
+          <h3 className=' text-gray-400 '>{products.description}</h3>
+          
         </Link>)
        }
     </div>
