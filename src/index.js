@@ -14,6 +14,11 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import SingleBlog from './components/SingleBlog';
+import Invite from './pages/Invite';
+import Item1 from './item/Item1';
+import Item2 from './item/Item2';
+import Item3 from './item/Item3';
+
 
 
 
@@ -42,8 +47,21 @@ const router = createBrowserRouter([
         path:"/products/:id",
         element:<SingleBlog/>,
         loader : ({params}) => fetch(`https://dummyjson.com/products/${params.id}`)
-    
         
+      },{
+        path:"/invite",
+        element:<Invite/>
+
+      },{
+        path:"/item/1",
+        element: <Item1/>
+      },{
+        path:"/item/2",
+        element: <Item2/>
+      }
+      ,{
+        path:"/item/3",
+        element: <Item3/>
       }
       
     ]

@@ -3,6 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
 import { FaXmark } from "react-icons/fa6";
 
+
+
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
@@ -12,6 +14,7 @@ const Header = () => {
     { path: "/about", links: "About us" },
     { path: "/blog", links: "Blog" },
     { path: "/contact", links: "Contact" },
+    { path: "/invite", links: "Invite" }
   ];
 
   const toggleMenu = () => {
@@ -22,6 +25,7 @@ const Header = () => {
 
   return (
     <header className="bg-gray-800 py-4 sm:py-6">
+      
       <div className="container mx-auto flex justify-between items-center px-4 sm:px-6">
         {/* Logo */}
         <div className="flex-shrink-0">
