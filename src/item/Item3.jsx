@@ -115,26 +115,42 @@ backgroundImage.src =
   }, []);
 
   return (
-    <div className="mainsec">
-      <canvas ref={canvasRef} id="myCanvas" width="1200" height="1599"></canvas>
-      <br />
-      <label htmlFor="textInput" className="tan">First Enter Text:</label>
-      <input ref={textInputRef} type="text" id="textInput" defaultValue="Mr and Mrs Kumar" />
+    <>
+    <div className="max-w-7xl mx-auto py-8">
+       
+       <div className="mainsec flex">
+       <div>
+       <canvas className="max-w-2xl" ref={canvasRef} id="myCanvas" width="1200" height="1599"></canvas>
+       </div>
+        
+       <div className="px-8">
+  <div className="text-lg mb-3">
+    <label htmlFor="textInput" className="tan">First Enter Text:</label>
+    <input ref={textInputRef} type="text" id="textInput" defaultValue="Mr and Mrs Kumar" className="rounded-sm border focus:outline-sky-300 text-base" />
+  </div>
 
-      <label htmlFor="sectextInput" className="f2">Second Enter Text:</label>
-      <input ref={sectextInputRef} type="text" id="sectextInput" defaultValue="Rahul" />
+  <div className="text-lg mb-3">
+    <label htmlFor="sectextInput" className="f2">Second Enter Text:</label>
+    <input ref={sectextInputRef} type="text" id="sectextInput" defaultValue="Rahul" className="rounded-sm border focus:outline-sky-300 text-base" />
+  </div>
 
-      <label htmlFor="fivetextInput">Five Enter Text:</label>
-      <input ref={fivetextInputRef} type="text" id="fivetextInput" defaultValue="Kajal" />
+  <div className="text-lg mb-3"><label htmlFor="fivetextInput">Five Enter Text:</label> <input ref={fivetextInputRef} type="text" id="fivetextInput" defaultValue="Kajal" className="rounded-sm border focus:outline-sky-300" /></div>
 
-      <label htmlFor="dateInput">Date Text:</label>
-      <input ref={dateInputRef} type="text" id="dateInput" defaultValue="MAY 24 | 2030" />
+  <div className="text-lg mb-3"><label htmlFor="dateInput">Date Text:</label> <input ref={dateInputRef}type="text" id="dateInput" className="rounded-sm border focus:outline-sky-300" defaultValue="MAY 24 | 2030" /></div>
 
-      <label htmlFor="venueInput">Venue:</label>
-      <input ref={venueInputRef} type="text" id="venueInput" defaultValue="Diveagar, Maharashtra, India" />
+  <div className="text-lg mb-3">
+    <label htmlFor="venueInput">Venue:</label>
+    <input ref={venueInputRef} type="text" id="venueInput" defaultValue="Diveagar, Maharashtra, India" className="rounded-sm border focus:outline-sky-300 text-base" />
+  </div>
 
-      <button id="downloadBtn">Download Image</button>
+  <button id="downloadBtn" className=" bg-sky-300 px-6 py-3 rounded-sm text-white hover:bg-orange-400">Download Image</button>
+</div>
+
+       </div>
+      
+       
     </div>
+    </>
   );
 };
 
